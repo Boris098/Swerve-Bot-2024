@@ -47,6 +47,12 @@ public class RobotContainer {
             .withRotationalRate(-joystick.getRightX() * MaxAngularRate) // Drive counterclockwise with negative X (left)
         ));
 
+
+    //Aiden Tat: I really hope I don't break things, but here is my broken code, I leave it commented so that it definatley won't break things. replace the "" with limelight name if needed. -Aiden
+    //joystick.x().whileTrue(LimelightHelpers.setLEDMode_ForceOn(""));
+    //joystick.y().whileTrue(LimelightHelpers.setLEDMode_ForceOff(""));
+     
+
     joystick.a().whileTrue(drivetrain.applyRequest(() -> brake));
     joystick.b().whileTrue(drivetrain
         .applyRequest(() -> point.withModuleDirection(new Rotation2d(-joystick.getLeftY(), -joystick.getLeftX()))));
